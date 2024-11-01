@@ -1,4 +1,4 @@
-/* Reset */
+/* Reset and Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +7,19 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #fff;
     line-height: 1.6;
-    background: #f4f6f8;
     overflow-x: hidden;
+    background: #000;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 3em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 /* Hero Section */
@@ -23,6 +32,7 @@ body {
     color: #fff;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -33,10 +43,6 @@ body {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
-    z-index: 1;
 }
 
 .hero-content h1 {
@@ -50,7 +56,7 @@ body {
 
 /* Navigation */
 nav {
-    background: #333;
+    background: #222;
     padding: 1em;
     text-align: center;
 }
@@ -70,44 +76,57 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #007acc;
+    color: #00bcd4;
 }
 
-/* Section Styling */
-section {
-    padding: 5em 0;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.7s ease;
+/* Section Parallax */
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 100px 0;
+    position: relative;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+#about {
+    background-image: url('https://source.unsplash.com/1600x900/?galaxy');
 }
 
-h2 {
-    font-size: 2.5em;
-    color: #007acc;
-    margin-bottom: 1em;
+#skills {
+    background-image: url('https://source.unsplash.com/1600x900/?nebula');
+}
+
+#experience {
+    background-image: url('https://source.unsplash.com/1600x900/?stars');
+}
+
+#education {
+    background-image: url('https://source.unsplash.com/1600x900/?space');
+}
+
+#projects {
+    background-image: url('https://source.unsplash.com/1600x900/?planets');
+}
+
+/* Styling for Lists */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0.5em;
-}
-
-/* Container */
-.container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 1em;
-    background: #333;
+    background: #222;
     color: #fff;
     font-size: 0.9em;
 }
@@ -120,13 +139,4 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-.slide-in {
-    animation: slideIn 1s ease forwards;
-}
-
-@keyframes slideIn {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
 }
