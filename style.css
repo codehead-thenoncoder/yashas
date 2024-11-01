@@ -107,4 +107,47 @@ nav ul li a:hover {
 }
 
 #projects {
-    background-image: url('https://images.unsplash.com/photo-1542038784456-6fd9f202411f?fit=crop&w=1600&h=900&q
+    background-image: url('https://images.unsplash.com/photo-1542038784456-6fd9f202411f?fit=crop&w=1600&h=900&q=80');
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 3em 0;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Headers */
+h2 {
+    font-size: 2.5em;
+    color: #00bcd4;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+/* Remove Bullets */
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background: #222;
+    color: #fff;
+    font-size: 0.9em;
+}
