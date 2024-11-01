@@ -8,7 +8,7 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Scroll animation for sections
+// Scroll-triggered animations for sections
 const sections = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver(entries => {
